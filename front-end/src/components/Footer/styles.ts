@@ -2,14 +2,17 @@ import { createUseStyles } from "react-jss";
 
 const styles = createUseStyles({
     footer: {
-        backgroundColor: 'darkblue',
-        height: '10vh',
-        width: '100vw',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
+        backgroundColor: '#080b1a',
+        padding: '32px 0',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderTop: '1px solid rgba(167, 139, 250, 0.1)',
+        color: '#475569',
+        fontSize: '0.8rem',
+        letterSpacing: '0.5px',
+        boxSizing: 'border-box',
     }
 });
 

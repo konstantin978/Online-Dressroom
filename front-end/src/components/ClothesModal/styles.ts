@@ -1,0 +1,164 @@
+import { createUseStyles } from "react-jss";
+
+const styles = createUseStyles({
+    overlay: {
+        position: 'fixed',
+        inset: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        backdropFilter: 'blur(4px)',
+        zIndex: 2000,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    modal: {
+        backgroundColor: '#12162e',
+        borderRadius: '20px',
+        width: '720px',
+        maxWidth: '90vw',
+        height: '80vh',
+        display: 'flex',
+        flexDirection: 'column',
+        border: '1px solid rgba(167, 139, 250, 0.15)',
+        boxShadow: '0 24px 64px rgba(0, 0, 0, 0.5)',
+        overflow: 'hidden',
+    },
+
+    header: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '24px 28px 16px',
+        borderBottom: '1px solid rgba(167, 139, 250, 0.1)',
+    },
+    title: {
+        fontSize: '1.3rem',
+        fontWeight: 700,
+        color: '#fff',
+        margin: 0,
+    },
+    closeButton: {
+        background: 'rgba(255, 255, 255, 0.06)',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        borderRadius: '10px',
+        color: '#94a3b8',
+        fontSize: '1.1rem',
+        width: '36px',
+        height: '36px',
+        cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'all 0.2s ease',
+        '&:hover': {
+            background: 'rgba(255, 255, 255, 0.1)',
+            color: '#fff',
+        },
+    },
+
+    filters: {
+        display: 'flex',
+        gap: '8px',
+        padding: '16px 28px',
+        flexWrap: 'wrap',
+    },
+    filterChip: {
+        background: 'transparent',
+        border: '1.5px solid rgba(255, 255, 255, 0.12)',
+        borderRadius: '20px',
+        color: '#94a3b8',
+        padding: '6px 16px',
+        fontSize: '0.8rem',
+        fontWeight: 500,
+        cursor: 'pointer',
+        transition: 'all 0.2s ease',
+        '&:hover': {
+            borderColor: '#a78bfa',
+            color: '#c4b5fd',
+        },
+    },
+    filterChipActive: {
+        background: 'rgba(167, 139, 250, 0.15)',
+        border: '1.5px solid #a78bfa',
+        color: '#a78bfa',
+        fontWeight: 600,
+    },
+
+    grid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 140px)',
+        gap: '14px',
+        padding: '8px 28px 28px',
+        overflowY: 'auto',
+        flex: 1,
+        justifyContent: 'center',
+    },
+
+    card: {
+        background: 'linear-gradient(145deg, #1a1e3c, #1f2347)',
+        borderRadius: '14px',
+        padding: '14px',
+        width: '140px',
+        height: '140px',
+        border: '1px solid rgba(167, 139, 250, 0.08)',
+        cursor: 'pointer',
+        transition: 'all 0.25s ease',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '8px',
+        boxSizing: 'border-box',
+        '&:hover': {
+            border: '1px solid rgba(167, 139, 250, 0.25)',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 8px 20px rgba(0, 0, 0, 0.3)',
+        },
+    },
+    cardEmoji: {
+        fontSize: '2.4rem',
+    },
+    cardName: {
+        fontSize: '0.82rem',
+        fontWeight: 600,
+        color: '#e2e8f0',
+        textAlign: 'center',
+    },
+    cardMeta: {
+        display: 'flex',
+        gap: '6px',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+    },
+    colorDot: {
+        width: '10px',
+        height: '10px',
+        borderRadius: '50%',
+        border: '1px solid rgba(255,255,255,0.15)',
+    },
+    cardType: {
+        fontSize: '0.68rem',
+        color: '#64748b',
+        fontWeight: 500,
+        textTransform: 'capitalize',
+    },
+
+    emptyState: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '48px 28px',
+        color: '#475569',
+        fontSize: '0.9rem',
+        gap: '8px',
+    },
+    emptyIcon: {
+        fontSize: '2.5rem',
+        opacity: 0.5,
+    },
+});
+
+export default styles;

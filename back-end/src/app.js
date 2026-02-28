@@ -1,9 +1,9 @@
-const express = require("express");
-const bodyParser = require('body-parser');
-const userRouter = require("./routes/user.routes");
+import express from "express";
+import bodyParser from "body-parser";
+import userRouter from "./routes/user.routes.js";
 
 const app = express();
 app.use(bodyParser.json());
 app.use("/user", userRouter);
 
-module.exports = app;
+export default app;

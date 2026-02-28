@@ -41,7 +41,7 @@ const Page = ({ username, onLoginSuccess, onLogout }: PageProps) => {
       {looksOpen && <LooksModal onClose={() => setLooksOpen(false)} />}
       {authOpen && (
         <AuthModal
-          onClose={() => setAuthOpen(false)}
+          onClose={() => username && setAuthOpen(false)}
           onLoginSuccess={handleLoginSuccess}
         />
       )}

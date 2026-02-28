@@ -34,7 +34,7 @@ class UserService {
       [username],
     );
 
-    if (checkUserByUsername.rowCount > 0) {
+    if (checkUserByUsername.rowCount !== 0) {
       return {
         status: "Error",
         message: "User with this username already exists",
@@ -46,7 +46,7 @@ class UserService {
       [email],
     );
 
-    if (checkUserByEmail.rowCount > 0) {
+    if (checkUserByEmail.rowCount !== 0) {
       return {
         status: "Error",
         message: "User with this email already exists",

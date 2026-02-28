@@ -35,8 +35,8 @@ const Page = ({ username, onLoginSuccess, onLogout }: PageProps) => {
       />
       <Body />
       <Footer />
-      {clothesOpen && (
-        <ClothesModal onClose={() => setClothesOpen(false)} />
+      {clothesOpen && username && (
+        <ClothesModal onClose={() => setClothesOpen(false)} username={username} />
       )}
       {looksOpen && <LooksModal onClose={() => setLooksOpen(false)} />}
       {authOpen && (

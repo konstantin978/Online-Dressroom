@@ -1,5 +1,5 @@
-import express from "express";
 import jwt from "jsonwebtoken";
+import express from "express";
 import userService from "../services/user.services.js";
 
 const userRouter = express.Router();
@@ -72,11 +72,6 @@ userRouter.post("/register", async (req, res) => {
     return res.status(400).json({ status: "Error", message: response.message });
   }
   return res.status(200).json({ status: "Success", message: response.message });
-});
-
-userRouter.get("/getAll", (req, res) => {
-  const allUsers = ["a", "b", "c"];
-  res.send("hello");
 });
 
 export default userRouter;

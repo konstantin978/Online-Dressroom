@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS Users (
 );
 
 CREATE TABLE IF NOT EXISTS Clothes (
-    cloth_id INT CONSTRAINT cloth_id_pk PRIMARY KEY ,
+    cloth_id SERIAL CONSTRAINT cloth_id_pk PRIMARY KEY,
     cloth_owner_id INT NOT NULL REFERENCES Users(id),
     cloth_type VARCHAR(255) NOT NULL,
     color VARCHAR(255) NOT NULL,

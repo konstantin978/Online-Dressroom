@@ -1,6 +1,7 @@
-import { type FormEvent, useEffect, useState } from "react";
+import { type FormEvent, useState } from "react";
 import useStyles from "./styles";
-import { type ClothItem, getClothes, addCloth } from "../../api/clothes";
+import { addCloth } from "../../api/clothes";
+import { useClothes } from "../../services/clothesService";
 
 const FILTER_OPTIONS = ["all", "top", "bottom", "shoes", "outerwear", "accessory"] as const;
 
@@ -28,9 +29,8 @@ interface ClothesModalProps {
 
 const ClothesModal = ({ onClose, username }: ClothesModalProps) => {
   const classes = useStyles();
+  const { clothes, loading, refresh } = useClothes();
   const [activeFilter, setActiveFilter] = useState<string>("all");
-  const [clothes, setClothes] = useState<ClothItem[]>([]);
-  const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
 
   const [clothType, setClothType] = useState("");
@@ -38,24 +38,6 @@ const ClothesModal = ({ onClose, username }: ClothesModalProps) => {
   const [clothSeason, setClothSeason] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
-
-  const fetchClothes = async () => {
-    setLoading(true);
-    try {
-      const res = await getClothes(username);
-      if (res.status === "Success" && res.data) {
-        setClothes(res.data);
-      }
-    } catch {
-      setError("Failed to load clothes");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchClothes();
-  }, [username]);
 
   const handleAdd = async (e: FormEvent) => {
     e.preventDefault();
@@ -68,7 +50,7 @@ const ClothesModal = ({ onClose, username }: ClothesModalProps) => {
         setClothColor("");
         setClothSeason("");
         setShowForm(false);
-        await fetchClothes();
+        await refresh();
       } else {
         setError(res.message);
       }

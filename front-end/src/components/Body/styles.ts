@@ -4,20 +4,20 @@ const styles = createUseStyles({
     body: {
         width: '100%',
         flex: 1,
-        backgroundColor: '#0f1225',
+        backgroundColor: '#111111',
         padding: '32px 48px',
         boxSizing: 'border-box',
     },
 
     banner: {
-        background: 'linear-gradient(135deg, #1a1045 0%, #2d1b69 50%, #1a1045 100%)',
+        background: 'linear-gradient(135deg, #1b2e1b 0%, #2e3d1b 50%, #1b2e1b 100%)',
         borderRadius: '20px',
         padding: '40px 48px',
         marginBottom: '32px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        border: '1px solid rgba(167, 139, 250, 0.15)',
+        border: '1px solid rgba(76, 175, 80, 0.2)',
         boxShadow: '0 4px 24px rgba(0, 0, 0, 0.3)',
     },
     bannerText: {
@@ -25,7 +25,7 @@ const styles = createUseStyles({
     },
     bannerGreeting: {
         fontSize: '0.9rem',
-        color: '#a78bfa',
+        color: '#f57c00',
         fontWeight: 500,
         letterSpacing: '1px',
         textTransform: 'uppercase',
@@ -57,7 +57,7 @@ const styles = createUseStyles({
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: '2rem',
-        border: '1px solid rgba(167, 139, 250, 0.2)',
+        border: '1px solid rgba(76, 175, 80, 0.25)',
         boxShadow: '0 2px 12px rgba(0, 0, 0, 0.2)',
     },
 
@@ -68,20 +68,23 @@ const styles = createUseStyles({
         marginBottom: '40px',
     },
     statCard: {
-        background: 'linear-gradient(145deg, #161a35, #1c2044)',
+        background: '#1e1e1e',
         borderRadius: '16px',
         padding: '24px',
-        border: '1px solid rgba(167, 139, 250, 0.1)',
+        border: '1px solid rgba(255, 255, 255, 0.06)',
         transition: 'all 0.25s ease',
         '&:hover': {
-            border: '1px solid rgba(167, 139, 250, 0.25)',
+            border: '1px solid rgba(76, 175, 80, 0.3)',
             transform: 'translateY(-2px)',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
         },
     },
     statIcon: {
-        fontSize: '1.6rem',
+        width: '44px',
+        height: '44px',
+        objectFit: 'cover',
         marginBottom: '12px',
+        borderRadius: '10px',
     },
     statValue: {
         fontSize: '2rem',
@@ -91,7 +94,7 @@ const styles = createUseStyles({
     },
     statLabel: {
         fontSize: '0.85rem',
-        color: '#64748b',
+        color: '#9ca3af',
         fontWeight: 500,
         margin: 0,
     },
@@ -110,13 +113,13 @@ const styles = createUseStyles({
     },
     seeAllLink: {
         fontSize: '0.85rem',
-        color: '#a78bfa',
+        color: '#f57c00',
         fontWeight: 500,
         cursor: 'pointer',
         background: 'none',
         border: 'none',
         '&:hover': {
-            color: '#c4b5fd',
+            color: '#ffb74d',
         },
     },
 
@@ -127,14 +130,14 @@ const styles = createUseStyles({
         paddingBottom: '8px',
     },
     lookCard: {
-        background: 'linear-gradient(145deg, #161a35, #1c2044)',
+        background: '#1e1e1e',
         borderRadius: '16px',
         overflow: 'hidden',
-        border: '1px solid rgba(167, 139, 250, 0.1)',
+        border: '1px solid rgba(255, 255, 255, 0.06)',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
         '&:hover': {
-            border: '1px solid rgba(167, 139, 250, 0.3)',
+            border: '1px solid rgba(76, 175, 80, 0.3)',
             transform: 'translateY(-4px)',
             boxShadow: '0 12px 32px rgba(0, 0, 0, 0.4)',
         },
@@ -165,15 +168,15 @@ const styles = createUseStyles({
     lookTag: {
         fontSize: '0.7rem',
         fontWeight: 500,
-        color: '#a78bfa',
-        background: 'rgba(167, 139, 250, 0.1)',
+        color: '#4caf50',
+        background: 'rgba(76, 175, 80, 0.1)',
         padding: '3px 10px',
         borderRadius: '20px',
-        border: '1px solid rgba(167, 139, 250, 0.15)',
+        border: '1px solid rgba(76, 175, 80, 0.2)',
     },
     lookDate: {
         fontSize: '0.75rem',
-        color: '#475569',
+        color: '#6b7280',
         marginTop: '10px',
     },
 });

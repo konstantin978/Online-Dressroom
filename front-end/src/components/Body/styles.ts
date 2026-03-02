@@ -37,28 +37,62 @@ const styles = createUseStyles({
         color: '#fff',
         margin: '0 0 12px 0',
         lineHeight: 1.3,
+        display: 'flex',
+        alignItems: 'center',
+        gap: '14px',
+        flexWrap: 'wrap',
+    },
+    bannerWeatherBadge: {
+        fontSize: '0.75rem',
+        fontWeight: 500,
+        color: '#f57c00',
+        background: 'rgba(245, 124, 0, 0.12)',
+        padding: '4px 12px',
+        borderRadius: '20px',
+        border: '1px solid rgba(245, 124, 0, 0.25)',
+        whiteSpace: 'nowrap',
     },
     bannerSubtitle: {
         fontSize: '0.95rem',
         color: '#94a3b8',
         margin: 0,
-        lineHeight: 1.5,
+        lineHeight: 1.6,
+        maxWidth: '480px',
     },
     bannerOutfit: {
         display: 'flex',
         gap: '12px',
         marginLeft: '48px',
+        flexWrap: 'wrap',
     },
     outfitPiece: {
-        width: '80px',
+        width: '100px',
         height: '100px',
         borderRadius: '14px',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: '2rem',
+        gap: '6px',
         border: '1px solid rgba(76, 175, 80, 0.25)',
         boxShadow: '0 2px 12px rgba(0, 0, 0, 0.2)',
+        background: 'rgba(255, 255, 255, 0.04)',
+    },
+    outfitPieceLabel: {
+        fontSize: '0.6rem',
+        fontWeight: 600,
+        color: '#f57c00',
+        textTransform: 'uppercase',
+        letterSpacing: '0.8px',
+    },
+    outfitPieceValue: {
+        fontSize: '0.75rem',
+        fontWeight: 500,
+        color: '#e2e8f0',
+        textAlign: 'center',
+        lineHeight: 1.3,
+        padding: '0 4px',
     },
 
     statsRow: {
@@ -179,6 +213,7 @@ const styles = createUseStyles({
         color: '#6b7280',
         marginTop: '10px',
     },
+
 });
 
 export default styles;
